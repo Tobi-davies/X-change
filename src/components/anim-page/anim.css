@@ -1,0 +1,23 @@
+.animation {
+  background: #e0e3ec;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.animation h1 {
+  font-size: 3rem;
+}
+.slider {
+  background: #33d69f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: translateY(100%);
+}
