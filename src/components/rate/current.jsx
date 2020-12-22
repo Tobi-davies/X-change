@@ -45,7 +45,7 @@ class Current extends Component {
       .then((response) => response.json())
       .then((data) => {
         this.setState({ exchange: data });
-        console.log(data.conversion_rates[this.state.quote]);
+        // console.log(data.conversion_rates[this.state.quote]);
         let display = `1 ${
           this.state.base
         } = ${this.state.exchange.conversion_rates[this.state.quote].toFixed(
@@ -66,7 +66,7 @@ class Current extends Component {
       .then((response) => response.json())
       .then((data) => {
         this.setState({ exchange: data });
-        console.log(data.conversion_rates[this.state.quote]);
+        // console.log(data.conversion_rates[this.state.quote]);
         let display = `1 ${
           this.state.base
         } = ${this.state.exchange.conversion_rates[this.state.quote].toFixed(
