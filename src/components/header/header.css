@@ -1,9 +1,3 @@
-.header {
-  /* border: 1px solid black; */
-  /* height: 15vh;
-  display: flex;
-  align-items: center; */
-}
 .X {
   color: #33d69f;
   font-size: 2rem;
@@ -21,10 +15,8 @@
   justify-content: space-between;
   align-items: flex-start;
   font-family: "Poppins", sans-serif;
-  /* border: 1px solid red; */
 }
 .time {
-  /* text-align: right; */
   margin-top: 5px;
   color: #fff;
   font-size: 1.2rem;
@@ -35,19 +27,14 @@
   align-items: flex-end;
 }
 .year {
-  /* margin-bottom: 3px; */
-  /* border-radius: 7px; */
   padding: 5px 10px;
   background: #f4f5f9;
   background: #33d69f;
   color: #f4f5f9;
-  /* background: #1f253b; */
-  /* color: #1f253b; */
 }
 .difftime {
   background: #713bdb;
   padding: 5px;
-  /* border-radius: 7px; */
 }
 
 @media (max-width: 640px) {

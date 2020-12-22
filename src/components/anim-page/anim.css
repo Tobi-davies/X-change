@@ -1,5 +1,8 @@
 .animation {
   background: #e0e3ec;
+  background: #33d69f;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
   position: fixed;
   top: 0;
   left: 0;
@@ -9,15 +12,38 @@
   justify-content: center;
   align-items: center;
 }
-.animation h1 {
-  font-size: 3rem;
+.animation .anim-div {
+  font-size: 2.5rem;
+  display: flex;
+  background: #e0e3ec;
+  background: #33d69f;
+
+  overflow: hidden;
+}
+.anim-div span {
+  padding: 5px;
 }
 .slider {
   background: #33d69f;
+  background: #e0e3ec;
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   transform: translateY(100%);
+}
+
+.xchange {
+  transform: translateY(100%);
+  display: inline-block;
+}
+
+@media (max-width: 700px) {
+  .animation .anim-div {
+    flex-direction: column;
+  }
+  .anim-div span {
+    padding: 0;
+  }
 }

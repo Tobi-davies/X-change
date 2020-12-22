@@ -1,23 +1,9 @@
-.exchange {
-  /* background: #f4f5f9; */
-  /* display: grid;
-  place-items: center;
-  height: 85vh; */
-  /* height: 100vh; */
-}
-.logo {
-  /* border: 1px solid green; */
-  /* padding: 0;
-  margin: 0; */
-}
-
 .exchange-box {
   width: 800px;
   margin: auto;
-  /* margin-top: 8%; */
   margin-top: 15vh;
   padding: 30px;
-  background: #713bdb;
+  /* background: #713bdb; */
   background: #f4f5f9;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
@@ -31,20 +17,16 @@
   font-size: 1.9rem;
   font-weight: 700;
   margin-bottom: 5px;
-
-  /* color: #f4f5f9; */
 }
 .exchange-text .second {
   font-size: 1rem;
   line-height: 18px;
-  /* color: #f4f5f9; */
   width: 60%;
   margin: auto;
   margin-bottom: 20px;
 }
 .select {
   display: flex;
-  /* border: 1px solid red; */
   width: 55%;
   margin: auto;
   justify-content: space-between;
@@ -59,8 +41,9 @@
 select {
   width: 80px;
   height: 40px;
-  background-color: #33d69f;
+  /* background-color: #33d69f; */
   background-color: #f4f5f9;
+  border: 2px solid #1f253b;
   font-size: 1.05rem;
 }
 .base p,
@@ -83,6 +66,7 @@ select {
   outline: none;
   padding: 0 10px;
   font-size: 1.1rem;
+  border: 2px solid #1f253b;
 }
 .amount {
   font-size: 0.78rem !important;
@@ -94,7 +78,7 @@ select {
   font-size: 1.2rem;
   padding-bottom: 8px;
   font-weight: bold;
-  color: #1dbe89;
+  /* color: #1dbe89; */
   color: #1f253b;
 }
 .explain p {
@@ -125,8 +109,6 @@ select {
   .exchange-text .first {
     font-size: 1.3rem;
     line-height: 25px;
-
-    /* color: #f4f5f9; */
   }
   .exchange-text .second {
     font-size: 0.9rem;
@@ -138,7 +120,6 @@ select {
   .select {
     flex-direction: column;
     align-items: flex-start;
-    /* border: 1px solid red; */
     margin-bottom: 10px;
     width: 80%;
   }
@@ -158,12 +139,10 @@ select {
   select {
     width: 70px;
     height: 33px;
-
     font-size: 0.9rem;
   }
   .value {
     width: 80%;
-    /* border: 1px solid black; */
     flex-direction: column;
     align-items: flex-start;
   }
@@ -176,16 +155,10 @@ select {
     margin-bottom: 8px;
     border: 1px solid #1dbe89;
   }
-  /* .amount {
-    font-size: 0.78rem ;
-    margin-bottom: 2px;
-    color: #1dbe89;
-    font-weight: bold;
-  } */
+
   .result {
     font-size: 1rem;
     padding-bottom: 0;
-    /* font-weight: bold; */
     color: #1f253b;
   }
 }

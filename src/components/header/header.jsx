@@ -1,7 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./header.css";
+import { TimelineMax } from "gsap";
 
 const Header = () => {
+  const tl = new TimelineMax();
+
+  useEffect(() => {
+    tl.fromTo(".time", { y: "-100%" }, { y: "0%", duration: 1, delay: 3 });
+    tl.fromTo(
+      ".logo",
+      { y: "-100%" },
+      { y: "0%", duration: 1, delay: 1 },
+      "-=2"
+    );
+    // eslint-disable-next-line
+  }, []);
+
   const [time, updateTime] = useState("");
   const [year, updateYear] = useState("");
 

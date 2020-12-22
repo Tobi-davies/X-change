@@ -23,33 +23,38 @@ class Current extends Component {
     )
       .then((response) => response.json())
       .then((data) => {
-        // console.log(data.conversion_rates["NGN"].toFixed(2));
         this.setState({ exchange: data });
-        // let fixed = this.state.exchange.conversion_rates[this.state.quote];
-        // console.log(fixed.toFixed(0));
 
         let display = `1 ${
           this.state.base
         } = ${this.state.exchange.conversion_rates[this.state.quote].toFixed(
           2
         )} ${this.state.quote}`;
-        // let result =
-        //   (answer * this.state.conversion).toFixed(2) + " " + this.state.quote;
 
         this.setState({ displayRate: display });
-
-        // let answer = data.conversion_rates[this.state.quote];
-        // let result =
-        //   (answer * this.state.conversion).toFixed(2) + " " + this.state.quote;
-        // this.setState({ result: result });
-
-        // console.log(ex);
       })
       .catch((err) => console.log(err));
   }
 
   handleBase = (e) => {
     this.setState({ base: e.target.value });
+
+    fetch(
+      `https://v6.exchangerate-api.com/v6/ec4a2f480c4bc9550d6b48f6/latest/${this.state.base}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({ exchange: data });
+        console.log(data.conversion_rates[this.state.quote]);
+        let display = `1 ${
+          this.state.base
+        } = ${this.state.exchange.conversion_rates[this.state.quote].toFixed(
+          2
+        )} ${this.state.quote}`;
+
+        this.setState({ displayRate: display });
+      })
+      .catch((err) => console.log(err));
   };
 
   handleQuote = (e) => {
@@ -70,13 +75,15 @@ class Current extends Component {
 
         this.setState({ displayRate: display });
 
-        // console.log(ex);
+        // console.log(this.state.quote);
       })
       .catch((err) => console.log(err));
   };
 
   handleConversion = (e) => {
     this.setState({ conversion: e.target.value });
+
+    // console.log(this.state.exchange);
 
     fetch(
       `https://v6.exchangerate-api.com/v6/ec4a2f480c4bc9550d6b48f6/latest/${this.state.base}`
@@ -92,16 +99,6 @@ class Current extends Component {
         } else {
           this.setState({ result: result });
         }
-
-        // this.setState({ exchange: data });
-        // console.log(data.conversion_rates[this.state.quote]);
-        // let display = `1 ${this.state.base} = ${
-        //   this.state.exchange.conversion_rates[this.state.quote]
-        // } ${this.state.quote}`;
-
-        // this.setState({ displayRate: display });
-
-        // console.log(ex);
       })
       .catch((err) => console.log(err));
   };
