@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import "./anim.css";
 import { TimelineMax } from "gsap";
-// import { gsap } from "gsap";
+import { gsap } from "gsap";
+import { CSSRulePlugin } from "gsap/CSSRulePlugin";
+
+gsap.registerPlugin(CSSRulePlugin);
 
 const Animpage = () => {
   const tl = new TimelineMax();

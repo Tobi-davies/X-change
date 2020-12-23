@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./header.css";
 import { TimelineMax } from "gsap";
+import { gsap } from "gsap";
+import { CSSRulePlugin } from "gsap/CSSRulePlugin";
+
+gsap.registerPlugin(CSSRulePlugin);
 
 const Header = () => {
   const tl = new TimelineMax();
