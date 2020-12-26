@@ -8,7 +8,7 @@ class Current extends Component {
     this.state = {
       date: "",
       time: "",
-      base: "USD",
+      base: "",
       quote: "JPY",
       exchange: "",
       displayRate: "",
@@ -19,17 +19,15 @@ class Current extends Component {
 
   componentDidMount() {
     fetch(
-      `https://v6.exchangerate-api.com/v6/ec4a2f480c4bc9550d6b48f6/latest/${this.state.base}`
+      "https://v6.exchangerate-api.com/v6/ec4a2f480c4bc9550d6b48f6/latest/USD"
     )
       .then((response) => response.json())
       .then((data) => {
         this.setState({ exchange: data });
 
-        let display = `1 ${
-          this.state.base
-        } = ${this.state.exchange.conversion_rates[this.state.quote].toFixed(
-          2
-        )} ${this.state.quote}`;
+        let display = `1 USD = ${this.state.exchange.conversion_rates[
+          this.state.quote
+        ].toFixed(2)} ${this.state.quote}`;
 
         this.setState({ displayRate: display });
       })
@@ -37,15 +35,23 @@ class Current extends Component {
   }
 
   handleBase = (e) => {
-    this.setState({ base: e.target.value });
+    // this.setState({ base: e.target.value });
+    let setbase = e.target.value;
+    // console.log(setbase);
+    this.setState({ base: setbase });
+    // console.log(this.state.base);
 
     fetch(
-      `https://v6.exchangerate-api.com/v6/ec4a2f480c4bc9550d6b48f6/latest/${this.state.base}`
+      `https://v6.exchangerate-api.com/v6/ec4a2f480c4bc9550d6b48f6/latest/${setbase}`
     )
       .then((response) => response.json())
       .then((data) => {
         this.setState({ exchange: data });
-        // console.log(data.conversion_rates[this.state.quote]);
+        // console.log(data);
+
+        console.log(data.conversion_rates[this.state.quote]);
+        // console.log(this.state.base);
+
         let display = `1 ${
           this.state.base
         } = ${this.state.exchange.conversion_rates[this.state.quote].toFixed(
