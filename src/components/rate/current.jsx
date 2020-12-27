@@ -462,7 +462,7 @@ class Current extends Component {
           </div>
           <div className="value">
             <div className="input">
-              <p className="amount">AMOUNT</p>
+              <p className="amount">AMOUN</p>
               <input
                 type="number"
                 name="number"
